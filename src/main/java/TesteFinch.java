@@ -36,7 +36,7 @@ public class TesteFinch {
                 final Integer[] quantidadeThreadsEncerradas = {0}; // Variável de controle, utilizada para controlar as Threads encerradas
                 final int quantidadeDiasPosteriores = 3; // Variável de quantos dias subsequentes será obtido as partidas
 
-                conn = DriverManager.getConnection("jdbc:mysql://"+ dbhost +"/"+ dbname +"?user="+ dbuser +"&password=" + dbpassword);
+                conn = DriverManager.getConnection("jdbc:mysql://"+ dbhost +"/"+ dbname +"?user="+ dbuser +"&password=" + dbpassword + "&useUnicode=true&characterEncoding=utf-8");
 
                 // Desabilito o auto commit para utilizar transação
                 conn.setAutoCommit(false);
